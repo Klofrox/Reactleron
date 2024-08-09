@@ -1,27 +1,13 @@
 const { app, BrowserWindow } = require('electron');
 const express = require('express');
 const escpos = require('escpos');
-const dgram = require('dgram');
+
 escpos.Network = require('escpos-network');
+
 const cors = require('cors');
 const appPos = express();
 const port = 5000;
 const path = require('path');
-
-/* const PORT = 8896;
-const HOST = '0.0.0.0'; 
-const server = dgram.createSocket('udp4');
-server.on('message', (message, rinfo) => {
-  console.log(`Gelen mesaj: ${message.toString()}`);
-});
-server.on('error', (err) => {
-  console.log(`Sunucu hatası: ${err.message}`);
-  server.close();
-});
-server.bind(PORT, HOST, () => {
-  console.log(`UDP sunucusu ${HOST}:${PORT} adresinde çalışıyor.`);
-}); */
-
 
 appPos.use(express.json());
 appPos.use(cors());

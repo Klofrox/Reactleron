@@ -55,7 +55,6 @@ const App = () => {
     };
     return (
         <div className="flex h-screen bg-gray-100">
-            {/* Sidebar */}
             <div className="w-1/6 bg-white text-black p-4 flex flex-col">
                 <h2 className="text-xl font-bold mb-6 text-center">PARK 326</h2>
                 <ul className="flex flex-col space-y-3">
@@ -90,7 +89,6 @@ const App = () => {
                 </ul>
             </div>
 
-            {/* Content */}
             <div className="flex-1 p-6">
                 {activeTab === 'ana-sayfa' && (
                     <div className="bg-white p-6 rounded-lg shadow-lg">
