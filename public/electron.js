@@ -63,8 +63,8 @@ appPos.post('/print-receipt', (req, res) => {
 });
 function createWindow () {
     const mainWindow = new BrowserWindow({
-      width: 800,
-      height: 600,
+      width: 1100,
+      height: 900,
       webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true,
@@ -87,6 +87,18 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
 appPos.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+    const asciiArt = String.raw`
+    ██████╗░░█████╗░██████╗░██╗░░██╗  ██████╗░██████╗░░█████╗░
+    ██╔══██╗██╔══██╗██╔══██╗██║░██╔╝  ╚════██╗╚════██╗██╔═══╝░
+    ██████╔╝███████║██████╔╝█████═╝░  ░█████╔╝░░███╔═╝██████╗░
+    ██╔═══╝░██╔══██║██╔══██╗██╔═██╗░  ░╚═══██╗██╔══╝░░██╔══██╗
+    ██║░░░░░██║░░██║██║░░██║██║░╚██╗  ██████╔╝███████╗╚█████╔╝
+    ╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝  ╚═════╝░╚══════╝░╚════╝░
+  `
+
+console.log(asciiArt)
+
 });
