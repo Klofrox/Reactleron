@@ -78,7 +78,7 @@ function createWindow () {
 app.whenReady().then(() => {
     setTimeout(() => {
       createWindow();
-    }, 8000);
+    }, 10000);
   
     app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow();

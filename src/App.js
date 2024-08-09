@@ -73,11 +73,11 @@ const App = () => {
                         <span className="text-sm font-bold">Yeni Sipariş</span>
                     </li>
                     <li
-                        onClick={() => setActiveTab('sipariş-sorgula')}
-                        className={`flex items-center cursor-pointer p-3 rounded-lg transition duration-300 ease-in-out hover:bg-gray-200 ${activeTab === 'sipariş-sorgula' ? 'bg-gray-200' : ''}`}
+                        onClick={() => setActiveTab('sipariş-geçmişi')}
+                        className={`flex items-center cursor-pointer p-3 rounded-lg transition duration-300 ease-in-out hover:bg-gray-200 ${activeTab === 'sipariş-geçmişi' ? 'bg-gray-200' : ''}`}
                     >
                         <FaSearch className="w-5 h-5 text-orange-500 mr-3" />
-                        <span className="text-sm font-bold">Sipariş Sorgula</span>
+                        <span className="text-sm font-bold">Sipariş Geçmişi</span>
                     </li>
                     <li
                         onClick={() => setActiveTab('fiş-yazdır')}
@@ -120,9 +120,9 @@ const App = () => {
                     </div>
                 </div>
             )}
-                {activeTab === 'sipariş-sorgula' && (
+                {activeTab === 'sipariş-geçmişi' && (
                     <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h2 className="text-2xl font-semibold mb-4">Sipariş Sorgula</h2>
+                        <h2 className="text-2xl font-semibold mb-4">Sipariş Geçmişi</h2>
                         <p>Bu sekme boş olabilir.</p>
                     </div>
                 )}
